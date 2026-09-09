@@ -1,0 +1,8 @@
+{
+  "name": "Hackathon SMK - Inovasi & Solusi Terapan",
+  "description": "Ajang kompetisi hackathon bagi talenta SMK untuk merancang dan merealisasikan solusi teknologi terapan berdampak nyata di lingkungan sekolah, ekosistem alam, serta kehidupan sosial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
