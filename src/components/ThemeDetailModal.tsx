@@ -14,7 +14,7 @@ export const ThemeDetailModal: React.FC<ThemeDetailModalProps> = ({ theme, onClo
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
       
-      <div className="relative w-full max-w-2xl bg-[#022c22] border border-emerald-500/40 rounded-3xl p-6 sm:p-8 text-white shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 text-slate-900 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
         
         {/* Glow Header */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-[#86efac] to-emerald-600" />
@@ -22,7 +22,7 @@ export const ThemeDetailModal: React.FC<ThemeDetailModalProps> = ({ theme, onClo
 
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-emerald-900/60 text-emerald-300 hover:text-white hover:bg-emerald-800 transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full bg-emerald-900/60 text-emerald-300 hover:text-slate-900 hover:bg-emerald-800 transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
@@ -32,10 +32,10 @@ export const ThemeDetailModal: React.FC<ThemeDetailModalProps> = ({ theme, onClo
           <span className="font-mono text-xs font-bold text-[#86efac] tracking-widest uppercase bg-emerald-950 px-3 py-1 rounded-full border border-emerald-700/50">
             EKSPOLORASI TEMA {theme.code}
           </span>
-          <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             {theme.title}
           </h3>
-          <p className="text-xs sm:text-sm text-emerald-200">
+          <p className="text-xs sm:text-sm text-emerald-700">
             {theme.tagline}
           </p>
         </div>
@@ -43,7 +43,7 @@ export const ThemeDetailModal: React.FC<ThemeDetailModalProps> = ({ theme, onClo
         {/* Modal Body */}
         <div className="py-6 space-y-6 text-xs sm:text-sm">
           <div>
-            <h4 className="font-bold text-white text-sm mb-2 flex items-center gap-2">
+            <h4 className="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
               <Lightbulb className="w-4 h-4 text-[#86efac]" />
               <span>Deskripsi Fokus Kategori</span>
             </h4>
@@ -54,7 +54,7 @@ export const ThemeDetailModal: React.FC<ThemeDetailModalProps> = ({ theme, onClo
 
           {/* Sample Project Ideas */}
           <div>
-            <h4 className="font-bold text-white text-sm mb-3 flex items-center gap-2">
+            <h4 className="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2">
               <Rocket className="w-4 h-4 text-[#86efac]" />
               <span>Contoh Gagasan Inovasi Terapan</span>
             </h4>

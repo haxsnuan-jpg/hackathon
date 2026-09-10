@@ -69,7 +69,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
       
       {/* Container Card */}
-      <div className="relative w-full max-w-xl bg-[#022c22] border border-emerald-500/40 rounded-3xl p-6 sm:p-8 text-white shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 text-slate-900 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
         
         {/* Glow Header Accent */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-[#86efac] to-emerald-600" />
@@ -78,7 +78,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-emerald-900/60 text-emerald-300 hover:text-white hover:bg-emerald-800 transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full bg-emerald-900/60 text-emerald-300 hover:text-slate-900 hover:bg-emerald-800 transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
@@ -92,7 +92,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
             <span className="font-mono text-[11px] font-bold text-[#86efac] tracking-widest uppercase">
               PORTAL REGISTRASI UNDANGAN
             </span>
-            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
               Aktivasi Kode Undangan SMK
             </h3>
           </div>
@@ -119,7 +119,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                       if (status === 'invalid') setStatus('idle');
                     }}
                     placeholder="Contoh: SMK-INOVASI-2026"
-                    className="w-full px-4 py-3.5 rounded-xl bg-emerald-950/90 border border-emerald-500/50 text-white font-mono text-base font-bold placeholder-emerald-700/60 focus:outline-none focus:border-[#22c55e] focus:ring-2 focus:ring-[#22c55e]/30 uppercase transition-all"
+                    className="w-full px-4 py-3.5 rounded-xl bg-emerald-950/90 border border-emerald-500/50 text-slate-900 font-mono text-base font-bold placeholder-emerald-700/60 focus:outline-none focus:border-[#22c55e] focus:ring-2 focus:ring-[#22c55e]/30 uppercase transition-all"
                   />
                   {status === 'checking' && (
                     <div className="absolute right-4 top-3.5">
@@ -155,7 +155,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                   <button
                     key={item.code}
                     onClick={() => handleCopyDemoCode(item.code)}
-                    className="text-[11px] font-mono px-2.5 py-1 rounded bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/50 flex items-center gap-1.5 transition-colors"
+                    className="text-[11px] font-mono px-2.5 py-1 rounded bg-emerald-900/60 hover:bg-emerald-800 text-emerald-700 border border-emerald-700/50 flex items-center gap-1.5 transition-colors"
                   >
                     <span>{item.code}</span>
                     <Copy className="w-3 h-3 text-[#86efac]" />
@@ -175,7 +175,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">{validatedData.school}</h4>
+                  <h4 className="text-sm font-bold text-slate-900">{validatedData.school}</h4>
                   <span className="text-xs text-emerald-300">{validatedData.region} • {validatedData.quota}</span>
                 </div>
               </div>
@@ -193,7 +193,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                   value={teamName}
                   onChange={(e) => setTeamName(e.target.value)}
                   placeholder="Contoh: InnovateVokasi Team"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-emerald-500/40 text-white font-medium focus:outline-none focus:border-[#22c55e]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-slate-200 text-slate-900 font-medium focus:outline-none focus:border-[#22c55e]"
                 />
               </div>
 
@@ -206,7 +206,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                     value={leaderName}
                     onChange={(e) => setLeaderName(e.target.value)}
                     placeholder="Nama Lengkap Siswa"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-emerald-500/40 text-white font-medium focus:outline-none focus:border-[#22c55e]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-slate-200 text-slate-900 font-medium focus:outline-none focus:border-[#22c55e]"
                   />
                 </div>
 
@@ -218,7 +218,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                     value={mentorTeacher}
                     onChange={(e) => setMentorTeacher(e.target.value)}
                     placeholder="Nama Guru Pendamping"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-emerald-500/40 text-white font-medium focus:outline-none focus:border-[#22c55e]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-slate-200 text-slate-900 font-medium focus:outline-none focus:border-[#22c55e]"
                   />
                 </div>
               </div>
@@ -228,7 +228,7 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
                 <select
                   value={selectedTheme}
                   onChange={(e) => setSelectedTheme(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-emerald-500/40 text-white font-medium focus:outline-none focus:border-[#22c55e]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-emerald-950 border border-slate-200 text-slate-900 font-medium focus:outline-none focus:border-[#22c55e]"
                 >
                   <option value="01 / EDUKASI">01 / EDUKASI & DIGITALISASI SEKOLAH</option>
                   <option value="02 / LINGKUNGAN">02 / LINGKUNGAN & EKOSISTEM ALAM</option>
@@ -262,20 +262,20 @@ export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClos
               <ShieldCheck className="w-10 h-10 animate-bounce" />
             </div>
 
-            <h3 className="text-2xl font-black text-white">Pendaftaran Tim Berhasil!</h3>
+            <h3 className="text-2xl font-black text-slate-900">Pendaftaran Tim Berhasil!</h3>
 
-            <p className="text-xs sm:text-sm text-emerald-200 leading-relaxed max-w-md mx-auto">
-              Selamat tim <strong className="text-white">{teamName || 'SMK Innovator'}</strong>! Slot pendaftaran Anda telah resmi terkunci untuk kategori <strong className="text-[#86efac]">{selectedTheme}</strong>.
+            <p className="text-xs sm:text-sm text-emerald-700 leading-relaxed max-w-md mx-auto">
+              Selamat tim <strong className="text-slate-900">{teamName || 'SMK Innovator'}</strong>! Slot pendaftaran Anda telah resmi terkunci untuk kategori <strong className="text-[#86efac]">{selectedTheme}</strong>.
             </p>
 
             <div className="p-4 rounded-2xl bg-emerald-950 border border-emerald-800 text-xs text-emerald-300 text-left space-y-2">
               <div className="flex justify-between">
                 <span>Sekolah:</span>
-                <span className="font-bold text-white">{validatedData?.school}</span>
+                <span className="font-bold text-slate-900">{validatedData?.school}</span>
               </div>
               <div className="flex justify-between">
                 <span>Ketua Tim:</span>
-                <span className="font-bold text-white">{leaderName || 'Siswa SMK'}</span>
+                <span className="font-bold text-slate-900">{leaderName || 'Siswa SMK'}</span>
               </div>
               <div className="flex justify-between">
                 <span>Status Berkas:</span>

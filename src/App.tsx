@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { HeroBridge } from './components/HeroBridge';
 import { BentoThemes } from './components/BentoThemes';
 import { SponsorMarquee } from './components/SponsorMarquee';
 import { TimelineSection } from './components/TimelineSection';
@@ -37,6 +38,9 @@ export default function App() {
           onOpenCodeModal={() => setCodeModalOpen(true)}
           onOpenGuideModal={() => setGuideModalOpen(true)}
         />
+
+        {/* 1.5 Hero Bridge: Stat Counter Bar & Scroll Indicator */}
+        <HeroBridge />
 
         {/* 2. Main Themes Bento Grid Section */}
         <BentoThemes

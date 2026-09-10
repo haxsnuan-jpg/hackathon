@@ -10,7 +10,7 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
+    <section id="faq" className="py-24 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
       
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
@@ -24,11 +24,11 @@ export const FaqSection: React.FC = () => {
             <span>PERTANYAAN SERING DIAJUKAN (FAQ)</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
             Punya Pertanyaan Mengenai <span className="text-emerald-400">Kompetisi?</span>
           </h2>
 
-          <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
             Temukan jawaban langsung seputar syarat tim, penggunaan kode undangan, mekanisme penjurian, serta fasilitas peserta.
           </p>
         </div>
@@ -42,8 +42,8 @@ export const FaqSection: React.FC = () => {
                 key={idx}
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? 'bg-slate-800 border-emerald-500 shadow-md ring-1 ring-emerald-500/30'
-                    : 'bg-slate-800/80 hover:bg-slate-800 border-slate-700 shadow-sm'
+                    ? 'bg-slate-100 border-emerald-500 shadow-md ring-1 ring-emerald-500/30'
+                    : 'bg-slate-100/80 hover:bg-slate-100 border-slate-300 shadow-sm'
                 }`}
               >
                 <button
@@ -54,12 +54,12 @@ export const FaqSection: React.FC = () => {
                     <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-500/30 shrink-0">
                       {faq.category}
                     </span>
-                    <span className="font-bold text-sm sm:text-base text-white">
+                    <span className="font-bold text-sm sm:text-base text-slate-900">
                       {faq.question}
                     </span>
                   </div>
 
-                  <div className={`w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 shrink-0 transition-transform duration-300 ${
+                  <div className={`w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 shrink-0 transition-transform duration-300 ${
                     isOpen ? 'rotate-180 bg-emerald-500 text-slate-950' : ''
                   }`}>
                     <ChevronDown className="w-4 h-4" />
@@ -67,7 +67,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed pt-2 border-t border-slate-700/60">
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-300/60">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -77,14 +77,14 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Contact Support Banner */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-slate-800 text-white border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+        <div className="mt-12 text-center p-6 rounded-2xl bg-slate-100 text-slate-900 border border-slate-300 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
           <div className="flex items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-xl bg-emerald-950 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0">
               <MessageSquare className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white">Pertanyaan Belum Terjawab?</h4>
-              <p className="text-xs text-slate-300">Tim sekretariat panitia siap membantu sekolah & siswa 24/7.</p>
+              <h4 className="text-sm font-bold text-slate-900">Pertanyaan Belum Terjawab?</h4>
+              <p className="text-xs text-slate-600">Tim sekretariat panitia siap membantu sekolah & siswa 24/7.</p>
             </div>
           </div>
 

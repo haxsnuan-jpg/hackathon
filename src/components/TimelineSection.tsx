@@ -8,7 +8,7 @@ export const TimelineSection: React.FC = () => {
   const activePhase = TIMELINE_DATA.find(p => p.number === activeTab) || TIMELINE_DATA[0];
 
   return (
-    <section id="alur-kompetisi" className="py-24 bg-slate-900 border-b border-slate-800 relative overflow-hidden">
+    <section id="alur-kompetisi" className="py-24 bg-white border-b border-slate-200 relative overflow-hidden">
       
       {/* Background Micro Grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
@@ -22,11 +22,11 @@ export const TimelineSection: React.FC = () => {
             <span>ALUR KOMPETISI & TIMELINE</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Tahapan Lengkap Perjalanan <span className="text-emerald-400">Inovator SMK</span>
           </h2>
 
-          <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
             Dari aktivasi kode undangan hingga panggung Grand Final On-Site 36 Jam. Setiap tahap dirancang untuk mengasah kapasitas inovasi terapan Anda.
           </p>
         </div>
@@ -41,13 +41,13 @@ export const TimelineSection: React.FC = () => {
                 onClick={() => setActiveTab(phase.number)}
                 className={`p-4 rounded-2xl border text-left transition-all duration-300 flex flex-col justify-between cursor-pointer ${
                   isSelected
-                    ? 'bg-emerald-950 text-white border-emerald-500 shadow-xl ring-2 ring-emerald-500/40 scale-[1.02]'
-                    : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700 hover:border-emerald-500/50'
+                    ? 'bg-emerald-950 text-slate-900 border-emerald-500 shadow-xl ring-2 ring-emerald-500/40 scale-[1.02]'
+                    : 'bg-slate-100 text-slate-200 border-slate-300 hover:bg-slate-700 hover:border-emerald-500/50'
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
                   <span className={`font-mono text-xs font-bold px-2 py-0.5 rounded ${
-                    isSelected ? 'bg-emerald-800 text-[#86efac]' : 'bg-slate-700 text-slate-300'
+                    isSelected ? 'bg-emerald-800 text-[#86efac]' : 'bg-slate-700 text-slate-600'
                   }`}>
                     FASE {phase.number}
                   </span>
@@ -60,7 +60,7 @@ export const TimelineSection: React.FC = () => {
                   <h4 className="font-extrabold text-sm line-clamp-1">
                     {phase.title}
                   </h4>
-                  <p className={`text-[11px] font-mono mt-1 ${isSelected ? 'text-emerald-300' : 'text-slate-400'}`}>
+                  <p className={`text-[11px] font-mono mt-1 ${isSelected ? 'text-emerald-300' : 'text-slate-500'}`}>
                     {phase.date.split('-')[0]}
                   </p>
                 </div>
@@ -70,14 +70,14 @@ export const TimelineSection: React.FC = () => {
         </div>
 
         {/* Selected Phase Detail Showcase Card */}
-        <div className="rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-2xl relative overflow-hidden bg-slate-800">
+        <div className="rounded-3xl p-8 sm:p-10 border border-slate-300 shadow-2xl relative overflow-hidden bg-slate-100">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Column Info */}
             <div className="lg:col-span-8 space-y-4">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs font-bold px-3 py-1 rounded-full bg-slate-900 text-emerald-300 border border-emerald-500/40">
+                <span className="font-mono text-xs font-bold px-3 py-1 rounded-full bg-white text-emerald-300 border border-emerald-500/40">
                   FASE {activePhase.number} / 05
                 </span>
                 <span className="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/40">
@@ -85,39 +85,39 @@ export const TimelineSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-black text-white">
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
                 {activePhase.title}
               </h3>
 
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 {activePhase.description}
               </p>
 
-              <div className="pt-2 flex flex-wrap gap-4 text-xs font-medium text-slate-300">
-                <div className="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-700 shadow-sm">
+              <div className="pt-2 flex flex-wrap gap-4 text-xs font-medium text-slate-600">
+                <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm">
                   <Calendar className="w-4 h-4 text-emerald-400" />
-                  <span className="font-bold text-white">{activePhase.date}</span>
+                  <span className="font-bold text-slate-900">{activePhase.date}</span>
                 </div>
 
-                <div className="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-700 shadow-sm">
+                <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-300 shadow-sm">
                   <MapPin className="w-4 h-4 text-emerald-400" />
-                  <span className="font-bold text-white">{activePhase.location}</span>
+                  <span className="font-bold text-slate-900">{activePhase.location}</span>
                 </div>
               </div>
             </div>
 
             {/* Right Column Visual / Action */}
-            <div className="lg:col-span-4 bg-slate-900 text-white rounded-2xl p-6 border border-emerald-500/40 flex flex-col justify-between space-y-4 shadow-lg">
+            <div className="lg:col-span-4 bg-white text-slate-900 rounded-2xl p-6 border border-emerald-500/40 flex flex-col justify-between space-y-4 shadow-lg">
               <div className="flex items-center gap-2 text-emerald-300 text-xs font-mono font-bold">
                 <Sparkles className="w-4 h-4 text-emerald-400" />
                 <span>CATATAN PENTING FASE</span>
               </div>
 
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Pastikan seluruh anggota tim dan guru pembimbing telah memverifikasi identitas sekolah sebelum batas akhir pengumpulan berkas.
               </p>
 
-              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
                 <span className="text-[11px] font-mono text-emerald-400">Verifikasi Resmi</span>
                 <CheckCircle className="w-4 h-4 text-[#22c55e]" />
               </div>

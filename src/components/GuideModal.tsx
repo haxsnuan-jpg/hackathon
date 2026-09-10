@@ -123,7 +123,7 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
           <button
             onClick={handleDownloadPdf}
             disabled={downloading}
-            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#022c22] hover:bg-emerald-900 text-white font-extrabold text-xs inline-flex items-center justify-center gap-2 shadow-lg transition-all"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-emerald-900 text-slate-900 font-extrabold text-xs inline-flex items-center justify-center gap-2 shadow-lg transition-all"
           >
             <Download className="w-4 h-4 text-[#86efac]" />
             <span>{downloading ? 'MENGUNDUH BERKAS...' : 'UNDUH PANDUAN LENGKAP (PDF)'}</span>
@@ -131,7 +131,7 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         {downloadSuccess && (
-          <div className="mt-3 p-3 rounded-xl bg-emerald-600 text-white text-xs font-bold text-center animate-fadeIn">
+          <div className="mt-3 p-3 rounded-xl bg-emerald-600 text-slate-900 text-xs font-bold text-center animate-fadeIn">
             ✓ Berkas Panduan Teknis Hackathon SMK 2026 telah berhasil diunduh ke perangkat Anda.
           </div>
         )}
